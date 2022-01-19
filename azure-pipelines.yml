@@ -63,6 +63,8 @@ stages:
 - stage: 'Deploy'
   displayName: 'Deploy the web application'
   dependsOn: Build
+  variables:
+    buildConfiguration: 'Release'
   jobs:
   - deployment: Deploy
     pool:
